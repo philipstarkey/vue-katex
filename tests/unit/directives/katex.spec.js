@@ -33,7 +33,7 @@ describe('Directive v-katex', () => {
   it('renders katex in display mode', () => {
     const expression = '\\frac{a_i}{1+x}';
     const wrapper = mount(testComponentDisplay, {
-      global: {directives: {vKatex.name: vKatex.directive}},
+      global: {directives: {[vKatex.name]: vKatex.directive}},
       props: {expression},
     });
     expect(katex.render).toBeCalledWith(expression, wrapper.element, {displayMode: true});
