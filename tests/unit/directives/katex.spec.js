@@ -24,7 +24,7 @@ describe('Directive v-katex', () => {
   it('renders katex', () => {
     const expression = '\\frac{a_i}{1+x}';
     const wrapper = mount(testComponent, {
-      global: {directives: {vKatex.name: vKatex.directive}},
+      global: {directives: {[vKatex.name]: vKatex.directive}},
       props: {expression},
     });
     expect(katex.render).toBeCalledWith(expression, wrapper.element, {});
@@ -83,7 +83,7 @@ describe('Directive v-katex', () => {
     };
     const globalVKatex = katexDirective();
     const wrapper = mount(testComponent, {
-      global: {directives: {globalVKatex.name: globalVKatex.directive}}
+      global: {directives: {[globalVKatex.name]: globalVKatex.directive}}
       props: {
         expression: {
           expression,
@@ -121,7 +121,7 @@ describe('Directive v-katex', () => {
       ],
     });
     const wrapper = mount(component, {
-      global: {directives: {globalVKatex.name: globalVKatex.directive}}
+      global: {directives: {[globalVKatex.name]: globalVKatex.directive}}
     });
 
     expect(renderMathInElement).toBeCalledWith(wrapper.element, {
