@@ -66,7 +66,7 @@ describe('Directive v-katex', () => {
       `,
     };
     const wrapper = mount(component, {
-      localVue,
+      global: {directives: {[vKatex.name]: vKatex.directive}},
     });
     expect(renderMathInElement).toBeCalledWith(wrapper.element, {});
   });
