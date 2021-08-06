@@ -83,7 +83,7 @@ describe('Directive v-katex', () => {
     };
     const globalVKatex = katexDirective();
     const wrapper = mount(testComponent, {
-      global: {directives: {[globalVKatex.name]: globalVKatex.directive}}
+      global: {directives: {[globalVKatex.name]: globalVKatex.directive}},
       props: {
         expression: {
           expression,
