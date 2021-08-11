@@ -1,6 +1,7 @@
-import {shallowMount, mount} from '@vue/test-utils';
+//import {shallowMount, mount} from '@vue/test-utils';
+import {shallowMount} from '@vue/test-utils';
 import KatexElement from '@/components/KatexElement.vue';
-import katex from 'katex';
+//import katex from 'katex';
 
 describe('KatexElement.vue', () => {
   //it('matches snapshot - inline mode', () => {
