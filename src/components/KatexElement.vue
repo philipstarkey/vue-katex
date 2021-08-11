@@ -1,4 +1,5 @@
 <script>
+import { h } from 'vue'
 import katex from 'katex';
 const merge = require('deepmerge');
 
@@ -78,7 +79,7 @@ export default {
       return katex.renderToString(this.expression, this.options);
     },
   },
-  render(h) {
+  render() {
     const element = this.displayMode ? 'div' : 'span';
     return h(element, {
       domProps: {
