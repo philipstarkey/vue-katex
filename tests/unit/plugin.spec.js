@@ -8,6 +8,7 @@
 //};
 
 describe('plugin.js', () => {
+  it('dummy', ()=>{expect(true).toBeTruthy();});
 //  it('registers components and directives', ()=>{
 //    const {components, directives} = vueInNodeEnv().options;
 //    expect(components.KatexElement).toBeTruthy();
