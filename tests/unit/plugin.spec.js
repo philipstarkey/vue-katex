@@ -7,7 +7,7 @@
 //  return localVue;
 //};
 
-//describe('plugin.js', () => {
+describe('plugin.js', () => {
 //  it('registers components and directives', ()=>{
 //    const {components, directives} = vueInNodeEnv().options;
 //    expect(components.KatexElement).toBeTruthy();
@@ -37,4 +37,4 @@
 //    });
 //    expect(vKatexSpy).toBeCalledWith(globalOptions);
 //  });
-//});
+});
