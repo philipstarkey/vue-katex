@@ -23,10 +23,12 @@ describe('KatexElement.vue', () => {
 
   it('respects global options', () => {
     const wrapper = shallowMount(KatexElement, {
-      mocks: {
-        $katexOptions: {
-          macros: {
-            '\\blah': '\\frac{#}{#}',
+      global: {
+        mocks: {
+          $katexOptions: {
+            macros: {
+              '\\blah': '\\frac{#}{#}',
+            },
           },
         },
       },
@@ -45,13 +47,15 @@ describe('KatexElement.vue', () => {
 
   it('merges global options', () => {
     const wrapper = shallowMount(KatexElement, {
-      mocks: {
-        $katexOptions: {
-          displayMode: false,
-          errorColor: '#000',
-          macros: {
-            '\\blah': '\\frac{#}{#}',
+      global: {
+        mocks: {
+          $katexOptions: {
+            displayMode: false,
+            errorColor: '#000',
+            macros: {
+              '\\blah': '\\frac{#}{#}',
 
+            },
           },
         },
       },
