@@ -124,7 +124,7 @@ describe('KatexElement.vue', () => {
     const wrapper = shallowMount(KatexElement, {
       props: {expression: '\\frac{a_i}{1+x}'},
     });
-    expect(wrapper.is('span')).toBe(true);
+    expect(wrapper.vm.el.is('span')).toBe(true);
   });
 
   it('has correct root element - display mode', () => {
@@ -134,7 +134,7 @@ describe('KatexElement.vue', () => {
         displayMode: true,
       },
     });
-    expect(wrapper.is('div')).toBe(true);
+    expect(wrapper.vm.el.is('div')).toBe(true);
   });
 
   it('matches katex renderToString', () => {
